@@ -1,0 +1,10 @@
+# Default ignored files
+/.idea/workspace.xml
+
+__pycache__/
+
+# Environments
+.env
+
+# PyCharm
+.idea/
