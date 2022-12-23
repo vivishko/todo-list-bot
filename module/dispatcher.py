@@ -9,8 +9,7 @@ from telegram import ReplyKeyboardRemove
 from module.utils.text_variables import WELCOME_MESSAGE, DESCRIPTION_MESSAGE, WANNA_CHANGE_LOCATION, \
     DELETING_KEYBOARD, CLOSE
 from module.models.users import User
-# from module.todos import ToDo
-# from module.dbhelper import DBConnection
+# from module.models.todos import ToDo
 
 from module.handlers.user_contacts import ask_for_location, change_location, receive_location
 from module.handlers.actions import action, keyboard_button_choice, add_action, \
@@ -24,7 +23,8 @@ def start(update, context):
     context.bot.send_message(update.effective_chat.id, DESCRIPTION_MESSAGE)
     User.get_or_create(
         user_id=update.message.from_user.id,
-        defaults={'username': update.message.from_user.username})
+        defaults={'username': update.message.from_user.username}
+        )
 
 
 def help_message(update, context):

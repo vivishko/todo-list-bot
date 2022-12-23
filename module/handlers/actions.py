@@ -1,24 +1,29 @@
 import uuid
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 
-
-from module.utils.text_variables import ZATYCHKA, ACTION_ADDED
+from module.utils.text_variables import ( 
+    ZATYCHKA, 
+    ACTION,
+    CHOOSE_DELETE_TYPE,
+    TODAYS_ACTIONS,
+    UNDONED_ACTIONS,
+    ACTION_ADDED 
+)
 from module.models.todos import User, ToDo
 
 
 def action(update, context):
     """ Add inline keyboard """
     user = User.get(user_id=update.message.from_user.id)
-    text_message = ZATYCHKA
     buttons = [
         [
             InlineKeyboardButton(text="add action", callback_data="action_add"),
             InlineKeyboardButton(text="delete action", callback_data="action_delete"),
-            InlineKeyboardButton(text="close this", callback_data="action_close")
+            # InlineKeyboardButton(text="close this buttons", callback_data="action_close")
         ]
     ]
     keyboard = InlineKeyboardMarkup(inline_keyboard=buttons)
-    context.bot.send_message(chat_id=user.user_id, text=text_message, reply_markup=keyboard)
+    context.bot.send_message(chat_id=user.user_id, text=ACTION, reply_markup=keyboard)
 
 
 def keyboard_button_choice(update, context):
@@ -39,7 +44,7 @@ def keyboard_button_choice(update, context):
             InlineKeyboardButton(text="others", callback_data="date_others")
         ]
         keyboard = InlineKeyboardMarkup(inline_keyboard=buttons)
-        context.bot.edit_text(chat_id=user.user_id, text=ZATYCHKA, reply_markup=keyboard)
+        context.bot.edit_text(chat_id=user.user_id, text=CHOOSE_DELETE_TYPE, reply_markup=keyboard)
     elif cb_query_data in ("today", "tomorrow", "others"):
         user = User.get(user_id=cb_query.message.from_user.id)
         date_dict = {
