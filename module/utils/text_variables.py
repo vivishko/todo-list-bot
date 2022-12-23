@@ -5,11 +5,11 @@ DESCRIPTION_MESSAGE = '''Here's what I can do:
 /start - start bot
 /help or /info - repeat message with list of commands
 
-/location - ask for your current location 
-/action - add action in your to-do list
-/today - ask for today's actions
-/tomorrow - ask for tomorrow's actions
-/other - ask for other planned actions
+/location - change current location (for timezone)
+/action - add or delete action in your to-do list
+/today - show today's actions
+/tomorrow - show tomorrow's actions
+/other - show other planned actions
 
 and other keyboards, but I'll show you this buttons later'''
 SURE = "Are you sure?"
@@ -23,12 +23,13 @@ WANNA_CHANGE_LOCATION = "I want to change my timezone 🌐"
 CHANGE_QUESTION = '''So, confirm sending your location using button down below ⬇
 (don't forget to turn on your gps)'''
 SEND_LOCATION = "Send my new timezone 📍"
-CHANGED_LOCATION = "okAy, your location is changed."
+CHANGED_LOCATION = "okAy, your location was changed."
 
 # actions
+ACTION = "What do you want to do?"
 CHOOSE_DELETE_TYPE = "For what day do you want to delete actions?"
 TODAYS_ACTIONS = "Can I see today's actions?"
-UNDONED_ACTIONS = "See undoned actions"
+UNDONED_ACTIONS = "See all undoned actions"
 ACTION_ADDED = "okAy, your action was added to you list."
 
 # other

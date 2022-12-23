@@ -3,8 +3,10 @@ from datetime import datetime
 from dateutil.tz import tzlocal
 from telegram import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 
-from module.utils.text_variables import ACCEPT_PHONE, YOUR_LOCATION, WANNA_CHANGE_LOCATION, CHANGE_QUESTION, \
-    SEND_LOCATION, CHANGED_LOCATION, SURE, CLOSE
+from module.utils.text_variables import (
+    ACCEPT_PHONE, 
+    YOUR_LOCATION, WANNA_CHANGE_LOCATION, CHANGE_QUESTION, SEND_LOCATION, CHANGED_LOCATION, 
+    SURE, CLOSE)
 from module.models.users import User
 
 

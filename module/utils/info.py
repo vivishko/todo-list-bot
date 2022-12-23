@@ -1,6 +1,7 @@
 from telegram import Update
 from typing import Dict
 
+# this function is not nessesary, because we can use Update.to_dict() method
 
 def get_users_data_dict(update: Update) -> Dict:
     """ transform users Update-data to dictionary """
