@@ -21,8 +21,11 @@ def create_tables():
     from module.models.todos import ToDo
     from module.models.users import User
     if not db.table_exists([ToDo, User]):
+        print(db.get_tables())
         db.create_tables([ToDo, User])
-    print("Tables created!") # TODO: remove this line
+        print("Tables created!") # TODO: remove this line
+    else:
+        print("Tables already exist!") # TODO: remove this line
 
 
 # songleton realisation

@@ -5,6 +5,7 @@ DESCRIPTION_MESSAGE = '''Here's what I can do:
 /start - start bot
 /help or /info - repeat message with list of commands
 
+/phone - share your phone number
 /location - change current location (for timezone)
 /action - add or delete action in your to-do list
 /today - show today's actions
@@ -17,9 +18,9 @@ CLOSE = "close buttons keyboard"
 DELETING_KEYBOARD = "...deleting keyboard buttons..."
 
 # contacts
-ACCEPT_PHONE = "..."
+ACCEPT_PHONE = "I want to share my phone number 📱"
 YOUR_LOCATION = "Your location (timezone) is"
-WANNA_CHANGE_LOCATION = "I want to change my timezone 🌐"
+WANNA_CHANGE_LOCATION = "I want to share my new timezone 🌐"
 CHANGE_QUESTION = '''So, confirm sending your location using button down below ⬇
 (don't forget to turn on your gps)'''
 SEND_LOCATION = "Send my new timezone 📍"

@@ -6,7 +6,8 @@
 3. [Postgresql docs](https://www.postgresql.org/docs/current/index.html).
 4. [PgAdmin site](https://www.pgadmin.org/).
 5. [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
+6. [Python-telegram-bot library](https://docs.python-telegram-bot.org/en/stable/telegram.ext.callbackqueryhandler.html).
 
 ### Basic stuff
-6. [Python Anti-Patterns](https://docs.quantifiedcode.com/python-anti-patterns/#).
-7. [Structuring Your Project](https://docs.python-guide.org/writing/structure/).
+1. [Python Anti-Patterns](https://docs.quantifiedcode.com/python-anti-patterns/#).
+2. [Structuring Your Project](https://docs.python-guide.org/writing/structure/).

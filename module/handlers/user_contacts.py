@@ -11,7 +11,7 @@ from module.models.users import User
 
 
 def ask_for_phone(update, context):
-    """ """
+    """ Enter /phone command """
     user = User.get(user_id=update.message.from_user.id)
     text_message = ACCEPT_PHONE
 
